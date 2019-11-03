@@ -162,7 +162,7 @@ int main(int argc, char* argv[]) {
 		convolution(aveMask, block_size, Col, Row, img, outimg);
 	}
 
-
+	
 	write_ucmatrix(Col, Row, outimg, argv[5]);
 
 
