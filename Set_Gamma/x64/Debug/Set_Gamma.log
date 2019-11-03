@@ -1,0 +1,5 @@
+﻿  Set_Gamma.cpp
+C:\Users\wjrmf\source\repos\opencv2\Set_Gamma\Set_Gamma.cpp(129,23): warning C4244:  '=': 'double'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\Set_Gamma\Set_Gamma.cpp(140,27): warning C4101:  'i' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Set_Gamma\Set_Gamma.cpp(140,22): warning C4101:  'avg' :참조되지 않은 지역 변수입니다.
+  Set_Gamma.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\Set_Gamma.exe

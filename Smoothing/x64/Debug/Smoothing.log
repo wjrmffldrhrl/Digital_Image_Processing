@@ -1,0 +1,3 @@
+﻿  Smoothing.cpp
+C:\Users\wjrmf\source\repos\opencv2\Smoothing\Smoothing.cpp(95,14): warning C4101: 'coeff' :참조되지 않은 지역 변수입니다.
+  Smoothing.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\Smoothing.exe

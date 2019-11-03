@@ -1,0 +1,4 @@
+﻿  Circle.cpp
+C:\Users\wjrmf\source\repos\opencv2\Circle\Circle.cpp(122,9): warning C4101:  'diameter' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Circle\Circle.cpp(120,18): warning C4101:  'img' :참조되지 않은 지역 변수입니다.
+  Circle.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\Circle.exe

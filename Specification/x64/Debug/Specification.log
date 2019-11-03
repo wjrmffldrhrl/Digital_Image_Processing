@@ -1,0 +1,7 @@
+﻿  Specification.cpp
+C:\Users\wjrmf\source\repos\opencv2\Specification\Specification.cpp(72,12): warning C4101: 'tmp' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Specification\Specification.cpp(74,20): warning C4101: 'hrange' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Specification\Specification.cpp(74,9): warning C4101: 'tp' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Specification\Specification.cpp(116,12): warning C4101: 'tmp' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Specification\Specification.cpp(118,8): warning C4101: 'diff' :참조되지 않은 지역 변수입니다.
+  Specification.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\Specification.exe

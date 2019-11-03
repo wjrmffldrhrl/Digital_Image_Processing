@@ -1,0 +1,7 @@
+﻿  Spec_test.cpp
+C:\Users\wjrmf\source\repos\opencv2\Spec_test\Spec_test.cpp(72,12): warning C4101: 'tmp' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Spec_test\Spec_test.cpp(74,20): warning C4101: 'hrange' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Spec_test\Spec_test.cpp(74,9): warning C4101: 'tp' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Spec_test\Spec_test.cpp(112,12): warning C4101: 'tmp' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Spec_test\Spec_test.cpp(114,8): warning C4101: 'diff' :참조되지 않은 지역 변수입니다.
+  Spec_test.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\Spec_test.exe

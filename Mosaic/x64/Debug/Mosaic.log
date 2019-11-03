@@ -1,0 +1,2 @@
+﻿  Mosaic.cpp
+C:\Users\wjrmf\source\repos\opencv2\Mosaic\Mosaic.cpp(2,10): error C1083:  포함 파일을 열 수 없습니다. 'opencv\highgui.h': No such file or directory
