@@ -1,1 +1,8 @@
-﻿  Histogram.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\Histogram.exe
+﻿  Histogram.cpp
+C:\Users\wjrmf\source\repos\opencv2\Histogram\Histogram.cpp(124,19): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\Histogram\Histogram.cpp(138,19): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\Histogram\Histogram.cpp(77,20): warning C4101: 'hrange' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Histogram\Histogram.cpp(217,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\Histogram\Histogram.cpp(231,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\Histogram\Histogram.cpp(168,20): warning C4101: 'hrange' :참조되지 않은 지역 변수입니다.
+  Histogram.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\Histogram.exe

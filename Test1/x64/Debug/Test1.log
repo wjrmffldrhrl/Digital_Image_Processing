@@ -1,0 +1,5 @@
+﻿  Test1.cpp
+C:\Users\wjrmf\source\repos\opencv2\Test1\Test1.cpp(71,12): warning C4101: 'tmp' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Test1\Test1.cpp(73,20): warning C4101: 'hrange' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Test1\Test1.cpp(73,9): warning C4101: 'tp' :참조되지 않은 지역 변수입니다.
+  Test1.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\Test1.exe

@@ -1,0 +1,3 @@
+﻿  Add.cpp
+C:\Users\wjrmf\source\repos\opencv2\Add\Add.cpp(89,12): warning C4101: 'k' :참조되지 않은 지역 변수입니다.
+  Add.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\Add.exe

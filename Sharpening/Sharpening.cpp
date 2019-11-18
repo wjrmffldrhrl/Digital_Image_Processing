@@ -125,14 +125,14 @@ void convolution(double** h, int F_length, int size_x, int size_y, unsigned char
 
 void make_Mask(int mask_size, double** Mask, int checkMask) {
 	int i, j;
-	double sobelYMask[3][3] = { -1,0,1,-2,0,2,-1,0,1 };
-	double sobelXMask[3][3] = { -1,-2,-1,0,0,0,1,2,1 };
+	double sobelXMask[3][3] = {1,0,-1,2,0,-2,1,0,-1};
+	double sobelYMask[3][3] = { -1,-2,-1,0,0,0,1,2,1 };
 
-	double PrewittYMask[3][3] = { -1,0,1,-1,0,1,-1,0,1 };
-	double PrewittXMask[3][3] = { -1,-1,-1,0,0,0,1,1,1 };
+	double PrewittXMask[3][3] = { -1,0,1,-1,0,1,-1,0,1 };
+	double PrewittYMask[3][3] = { -1,-1,-1,0,0,0,1,1,1 };
 
-	double RobertsYMask[3][3] = { 0,0,-1,0,1,0,0,0,0 };
-	double RobertsXMask[3][3] = { -1,0,0,0,1,0,0,0,0 };
+	double RobertsXMask[3][3] = { 0,0,-1,0,1,0,0,0,0 };
+	double RobertsYMask[3][3] = { -1,0,0,0,1,0,0,0,0 };
 
 	double Laplace1Mask[3][3] = { 0,-1,0,-1,4,-1,0,-1,0 };
 	double Laplace2Mask[3][3] = { -1,-1,-1,-1,8,-1,-1,-1,-1 };
