@@ -89,27 +89,27 @@ void write_ucmatrix(int size_x, int size_y, unsigned char** ucmatrix, char* file
 }
 void Fdct(int** PEL, int** Coeff) {
 
-	int i, j, k, l;
+	int x, y, u, v;
 	//M_PI
 	double cv = 1 / pow(2, 0.5);
 
-	double N = Row * Col;
-	long dd=0;
+	double N = Row;
+	long dd;
 
-	for (k = 0; k < Row; k++) {
-		for (l = 0; l < Col; l++) {
+	for (u = 0; u < Row; u++) {
+		for (v = 0; v < Col; v++) {
+			dd = 0;
+			printf("Coeff[%d][%d] = ",u,v);
 
-			printf("Coeff[%d][%d] = ",k,l);
-
-			for (i = 0; i < Row; i++) {
-				for (j = 0; j < Col; j++) {
-					dd += PEL[i][j] * cos(((2 * i + 1) * k * M_PI) / 2 * N) * cos(((2 * j + 1) * l * M_PI) / 2 * N);
+			for (x = 0; x < Row; x++) {
+				for (y = 0; y < Col; y++) {
+					dd += PEL[x][y] * cos(((2 * x + 1) * u * M_PI) / 2 * N) * cos(((2 * y + 1) * v * M_PI) / 2 * N);
 				}
 			}
 
-			Coeff[k][l] = dd * (4 * cv * cv) / pow(N, 2);
+			Coeff[u][v] = dd * (4 * cv * cv) / pow(N, 2);
 
-			printf("%d\n",Coeff[k][l]);
+			printf("%d\n",Coeff[u][v]);
 		}
 	}
 
