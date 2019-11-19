@@ -167,7 +167,6 @@ int main(int argc, char* argv[]) {
 
 	Row = atoi(argv[2]);
 	Col = atoi(argv[3]);
-	flag = atoi(argv[4]);
 	img = uc_alloc(Row, Col);
 	outimg = uc_alloc(Row, Col);
 
@@ -230,7 +229,7 @@ int main(int argc, char* argv[]) {
 			for (j = 0; j < Col; j++)
 				outimg[i][j] = i_outimg[i][j];
 	
-	write_ucmatrix(Col, Row, outimg, argv[5]);
+	write_ucmatrix(Col, Row, outimg, argv[4]);
 
 
 	getchar();

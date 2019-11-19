@@ -91,25 +91,30 @@ void Fdct(int** PEL, int** Coeff) {
 
 	int x, y, u, v;
 	//M_PI
-	double cv = 1 / pow(2, 0.5);
-
-	double N = Row;
+	double cv,cu;
+	double N = 8;
 	long dd;
 
-	for (u = 0; u < Row; u++) {
-		for (v = 0; v < Col; v++) {
+	for (u = 0; u < 8; u++) {
+		for (v = 0; v < 8; v++) {
 			dd = 0;
-			printf("Coeff[%d][%d] = ",u,v);
+			if ( v == 0)
+				cv = 1 / pow(2, 0.5);
+			else
+				cv = 1;
 
-			for (x = 0; x < Row; x++) {
-				for (y = 0; y < Col; y++) {
-					dd += PEL[x][y] * cos(((2 * x + 1) * u * M_PI) / 2 * N) * cos(((2 * y + 1) * v * M_PI) / 2 * N);
+			if (u == 0)
+				cu = 1 / pow(2, 0.5);
+			else
+				cu = 1;
+			for (x = 0; x < 8; x++) {
+				for (y = 0; y < 8; y++) {
+					dd += (long)PEL[x][y] * cos(((2 * x + 1) * u * M_PI) / 2 * N) * cos(((2 * y + 1) * v * M_PI) / 2 * N);
 				}
 			}
 
 			Coeff[u][v] = dd * (4 * cv * cv) / pow(N, 2);
 
-			printf("%d\n",Coeff[u][v]);
 		}
 	}
 
@@ -118,25 +123,38 @@ void Fdct(int** PEL, int** Coeff) {
 
 
 void Idct(int** Coeff, int** PEL) {
-	int i, j, k, l;
+	
+	int x, y, u, v;
 	//M_PI
-	double cv = 1 / pow(2, 0.5);
+	double cv,cu;
 
-	double N = Row * Col;
+	double N = 8;
 	long dd = 0;
 
 
-	for (k = 0; k < Row; k++) {
-		for (l = 0; l < Col; l++) {
+	for (x = 0; x < 8; x++) {
+		for (y = 0; y < 8; y++) {
 
+			dd = 0;
+		
 
-			for (i = 0; i < Row; i++) {
-				for (j = 0; j < Col; j++) {
-					dd += cv*cv*Coeff[i][j]* cos(((2 * k + 1) * i * M_PI) / 2 * N) * cos(((2 * l + 1) * j * M_PI) / 2 * N);
+			for (u = 0; u< 8; u++) {
+				for (v = 0; v < 8; v++) {
+					if (v == 0)
+						cv = 1 / pow(2, 0.5);
+					else
+						cv = 1;
+
+					if (u == 0)
+						cu = 1 / pow(2, 0.5);
+					else
+						cu = 1;
+
+					dd += (long)cv*cv*Coeff[u][v]* cos(((2 * x + 1) * u * M_PI) / 2 * N) * cos(((2 * y + 1) * v * M_PI) / 2 * N);
 				}
 			}
 
-			PEL[k][l] = dd * (4 / pow(N, 2));
+			PEL[x][y] = dd * (4 / pow(N, 2));
 
 		}
 	}
@@ -147,7 +165,6 @@ int main(int argc, char* argv[]) {
 
 	unsigned char** img;
 	unsigned char** outimg;
-	int flag;
 	int** i_img;
 	int** i_outimg;
 	int** img8;
@@ -158,7 +175,6 @@ int main(int argc, char* argv[]) {
 
 	Row = atoi(argv[2]);
 	Col = atoi(argv[3]);
-	flag = atoi(argv[4]);
 	img = uc_alloc(Row, Col);
 	outimg = uc_alloc(Row, Col);
 
@@ -175,29 +191,51 @@ int main(int argc, char* argv[]) {
 
 	for (i = 0; i < Row; i += 8) {
 		for (j = 0; j < Col; j += 8) {
-			printf("Fdct img[%d][%d] \n ", i, j);
-		
-			Fdct(i_img, i_outimg);
-		
+
+			printf("Fdct img[%d][%d] \n", i, j);
+			for (k = 0; k < 8; k++) {//8조각 내기
+				for (l = 0; l < 8; l++) {
+
+					img8[k][l] = i_img[i + k][j + l];
+				}
+			}
+
+			Fdct(img8, outimg8);
+
+			for (k = 0; k < 8; k++) {
+				for (l = 0; l < 8; l++) {
+
+					i_outimg[i + k][j + l] = outimg8[k][l];
+				}
+			}
 		}
 	}
-	printf("end Fdct\n");
+
 
 	for (i = 0; i < Row; i += 8) {
 		for (j = 0; j < Col; j += 8) {
+			printf("Idct img[%d][%d] \n", i, j);
+			for (k = 0; k < 8; k++) {
+				for (l = 0; l < 8; l++) {
 
-			printf("Idct img[%d][%d] \n ", i, j);
-			Idct(i_outimg, i_img);
+					img8[k][l] = i_outimg[i + k][j + l];
+				}
+			}
 
+			Idct(img8, outimg8);
 
+			for (k = 0; k < 8; k++) {
+				for (l = 0; l < 8; l++) {
+
+					i_outimg[i + k][j + l] = outimg8[k][l];
+				}
+			}
 		}
 	}
 
-	printf("end Idct\n");
-
 	for (i = 0; i < Row; i++)
 		for (j = 0; j < Col; j++)
-			outimg[i][j] = i_img[i][j];
+			outimg[i][j] = i_outimg[i][j];
 	write_ucmatrix(Col, Row, outimg, argv[4]);
 
 	printf("end process\n");
