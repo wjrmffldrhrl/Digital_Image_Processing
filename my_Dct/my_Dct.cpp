@@ -211,7 +211,7 @@ int main(int argc, char* argv[]) {
 		}
 	}
 
-
+	/*
 	for (i = 0; i < Row; i += 8) {
 		for (j = 0; j < Col; j += 8) {
 			printf("Idct img[%d][%d] \n", i, j);
@@ -231,7 +231,7 @@ int main(int argc, char* argv[]) {
 				}
 			}
 		}
-	}
+	}*/
 
 	for (i = 0; i < Row; i++)
 		for (j = 0; j < Col; j++)
