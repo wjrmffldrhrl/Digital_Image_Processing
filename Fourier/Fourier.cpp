@@ -268,25 +268,6 @@ int fft_2d(double** X_re, double** X_im, int N, int Mode) {
 	}
 	else if (Mode == 1) {
 		for (i = 0; i < N; i++) {
-			fft(X_re[i], X_im[i], N);
-		}
-
-		for (j = 0; j < N; j++) {
-			for (i = 0; i < N; i++) {
-				temp_re[i] = X_re[i][j];
-				temp_im[i] = X_im[i][j];
-
-			}
-			fft(temp_re, temp_im, N);
-			for (i = 0; i < N; i++) {
-				X_re[i][j] = temp_re[i] / N;
-				X_im[i][j] = temp_im[i] / N;
-
-			}
-		}
-	}
-	else if (Mode == 2) {
-		for (i = 0; i < N; i++) {
 			for (j = 0; j < N; j++) {
 				temp_re[j] = X_re[i][j] * pow(-1, j);
 				temp_im[j] = X_im[i][j] * pow(-1, j);

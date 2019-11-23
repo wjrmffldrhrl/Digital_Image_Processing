@@ -116,7 +116,7 @@ void mFdct(int** PEL, int** Coeff) {
 				}
 			}
 
-			Coeff[u][v] =(int)dd * (4 * cv * cu) / pow(N, 2);
+			Coeff[u][v] =dd * (4 * cv * cu) / pow(N, 2);
 			//Coeff[u][v] = dd * (cv * cu) / pow(2 * N, 0.5);
 			//Coeff[u][v] =dd * (cv * cu) / 4;
 
@@ -238,12 +238,8 @@ int main(int argc, char* argv[]) {
 	unsigned char** outimg;
 	int** i_img;
 	int** i_outimg;
-	float** f_img;
-	float** f_outimg;
 	int** img8;
 	int** outimg8;
-	float** fimg8;
-	float** foutimg8;
 
 
 	int i, j, k, l;
@@ -275,7 +271,7 @@ int main(int argc, char* argv[]) {
 				}
 			}
 
-			Fdct(img8, outimg8);
+			mFdct(img8, outimg8);
 
 			for (k = 0; k < 8; k++) {
 				for (l = 0; l < 8; l++) {

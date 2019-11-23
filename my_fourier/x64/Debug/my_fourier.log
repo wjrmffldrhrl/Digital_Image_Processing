@@ -1,0 +1,8 @@
+﻿  my_fourier.cpp
+C:\Users\wjrmf\source\repos\opencv2\my_fourier\my_fourier.cpp(116,19): warning C4244: '=': 'double'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\my_fourier\my_fourier.cpp(363,19): warning C4244: '=': 'double'에서 'unsigned char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\my_fourier\my_fourier.cpp(310,24): warning C4101: 'total' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\my_fourier\my_fourier.cpp(310,14): warning C4101: 'max' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\my_fourier\my_fourier.cpp(310,19): warning C4101: 'min' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\my_fourier\my_fourier.cpp(311,6): warning C4101: 'Mode' :참조되지 않은 지역 변수입니다.
+  my_fourier.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\my_fourier.exe

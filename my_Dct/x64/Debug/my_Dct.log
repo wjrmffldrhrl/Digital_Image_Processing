@@ -1,10 +1,5 @@
 ﻿  my_Dct.cpp
-C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(115,107): warning C4244: '+=': 'double'에서 'long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(119,41): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(158,114): warning C4244: '+=': 'double'에서 'long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(162,19): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(246,10): warning C4101: 'foutimg8' :참조되지 않은 지역 변수입니다.
-C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(241,10): warning C4101: 'f_img' :참조되지 않은 지역 변수입니다.
-C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(245,10): warning C4101: 'fimg8' :참조되지 않은 지역 변수입니다.
-C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(242,10): warning C4101: 'f_outimg' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(115,101): warning C4244: '+=': 'double'에서 'long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(119,26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(159,108): warning C4244: '+=': 'double'에서 'long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   my_Dct.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\my_Dct.exe
