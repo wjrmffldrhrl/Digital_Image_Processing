@@ -1,0 +1,5 @@
+﻿  Wavelet.cpp
+C:\Users\wjrmf\source\repos\opencv2\Wavelet\Wavelet.cpp(378,8): warning C4101: 'f1' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Wavelet\Wavelet.cpp(374,9): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Wavelet\Wavelet.cpp(374,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  Wavelet.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\Wavelet.exe

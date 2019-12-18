@@ -67,20 +67,22 @@ void write_ucmatrix(int size_x, int size_y, unsigned char** ucmatrix, char* file
 	fclose(f);
 }
 
-void sub(unsigned char** img1, unsigned char** img2) {
+void sub(unsigned char** img1, unsigned char** img2,unsigned char ** outimg) {
 	int i, j;
-	int sum=0,cnt=0;
 	for (i = 0; i < Row; i++) {
 		for (j = 0; j < Col; j++) {
-			if (img1[i][j] != img2[i][j]) {
-				cnt++;
-				sum += img1[i][j] - img2[i][j];
+			if (img2[i][j] > img1[i][j])
+				outimg[i][j] = 0;
+			else {
+				if ((img1[i][j] - img2[i][j]) * 10 > 255)
+					outimg[i][j] = 255;
+				else
+					outimg[i][j] = (img1[i][j] - img2[i][j])*10;
 			}
+
 		}
 	}
 
-	printf("different data count = %d\n", cnt);
-	printf("sum = %d\n", sum);
 }
 
 
@@ -88,18 +90,19 @@ int main(int argc, char* argv[]) {
 
 	unsigned char** img1;
 	unsigned char** img2;
+	unsigned char** outimg;
 
 	Row = atoi(argv[3]);
 	Col = atoi(argv[4]);
 	img1 = uc_alloc(Row, Col);
 	img2 = uc_alloc(Row, Col);
-
+	outimg = uc_alloc(Row, Col);
 	read_ucmartrix(Row, Col, img1, argv[1]);
 	read_ucmartrix(Row, Col, img2, argv[2]);
 
-	sub(img1,img2);
+	sub(img1,img2,outimg);
 
-
+	write_ucmatrix(Row, Col, outimg, argv[5]);
 
 
 	getchar();

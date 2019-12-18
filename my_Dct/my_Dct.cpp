@@ -93,33 +93,37 @@ void mFdct(int** PEL, int** Coeff) {
 	int x, y, u, v;
 	//M_PI
 	double cv,cu;
-	double N = 8;
-	long dd;
+	double N = 8.;
+	double dd=0;
 
 	for (u = 0; u < 8; u++) {
 		for (v = 0; v < 8; v++) {
 			dd = 0;
 
 			if ( v == 0)
-				cv = 1 / pow(2, 0.5);
+				cv = 1. /sqrt(2);
 			else
-				cv = 1;
+				cv = 1.;
 
 			if (u == 0)
-				cu = 1 / pow(2, 0.5);
+				cu = 1. / sqrt(2);
 			else
-				cu = 1;
+				cu = 1.;
 
 			for (x = 0; x < 8; x++) {
 				for (y = 0; y < 8; y++) {
-					dd += (long)PEL[x][y] * cos(((2 * x + 1) * u * M_PI) / 2 * N) * cos(((2 * y + 1) * v * M_PI) / 2 * N);
+
+					//printf("PEL[%d][%d] = %d\n", x, y, PEL[x][y]);
+					//dd += PEL[x][y] * cos(((2. * (double)x + 1.) * (double)u * M_PI) / 2. * N) * cos(((2. * (double)y + 1.) * (double)v * M_PI) / 2. * N);
+					  dd += PEL[x][y] * cos(((2  *         x + 1)  *         u * M_PI) /(2. * 8.)) * cos(((2 *        y + 1)  *         v * M_PI) / (2. * 8.));
+					//printf("fdct dd[%d][%d] = %lf\n", u, v, dd);
 				}
 			}
 
-			Coeff[u][v] =dd * (4 * cv * cu) / pow(N, 2);
+			Coeff[u][v] =dd * ( cv * cu/4.);
 			//Coeff[u][v] = dd * (cv * cu) / pow(2 * N, 0.5);
 			//Coeff[u][v] =dd * (cv * cu) / 4;
-
+			
 		}
 	}
 
@@ -134,7 +138,7 @@ void mIdct(int** Coeff, int** PEL) {
 	double cv,cu;
 
 	double N = 8;
-	long dd = 0;
+	double dd = 0;
 
 
 	for (x = 0; x < 8; x++) {
@@ -146,20 +150,20 @@ void mIdct(int** Coeff, int** PEL) {
 			for (u = 0; u< 8; u++) {
 				for (v = 0; v < 8; v++) {
 					if (v == 0)
-						cv = 1 / pow(2, 0.5);
+						cv = 1. / sqrt(2);
 					else
-						cv = 1;
+						cv = 1.;
 
 					if (u == 0)
-						cu = 1 / pow(2, 0.5);
+						cu = 1. / sqrt(2);
 					else
-						cu = 1;
+						cu = 1.;
 
-					dd += (long)cv*cu*Coeff[u][v]* cos(((2 * x + 1) * u * M_PI) / 2 * N) * cos(((2 * y + 1) * v * M_PI) / 2 * N);
+					dd += cv*cu*Coeff[u][v]* cos(((2. * (double)x + 1) * (double)u * M_PI) / (2 * N)) * cos(((2. * (double)y + 1.) * (double)v * M_PI) / (2. * N));
 				}
 			}
 
-			PEL[x][y] = dd * (4 / N*N);
+			PEL[x][y] = dd * (4. /( 2.*N));
 
 		}
 	}
@@ -268,6 +272,7 @@ int main(int argc, char* argv[]) {
 				for (l = 0; l < 8; l++) {
 
 					img8[k][l] = i_img[i + k][j + l];
+					//printf("img8[%d][%d] = %d \n", k, l, img8[k][l]);
 				}
 			}
 

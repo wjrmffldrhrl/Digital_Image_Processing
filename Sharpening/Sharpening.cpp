@@ -114,7 +114,7 @@ void convolution(double** h, int F_length, int size_x, int size_y, unsigned char
 					sum += h[y][x] * (double)img1[indexY][indexX];
 				}
 			}
-			//sum += 128;
+			sum += 128;
 			if (sum < 0) sum = 0;
 			else if (sum > 255) sum = 255;
 			img2[i][j] = (unsigned char)sum;

@@ -1,5 +1,4 @@
 ﻿  my_Dct.cpp
-C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(115,101): warning C4244: '+=': 'double'에서 'long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(119,26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(159,108): warning C4244: '+=': 'double'에서 'long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(123,20): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\my_Dct\my_Dct.cpp(166,19): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   my_Dct.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\my_Dct.exe

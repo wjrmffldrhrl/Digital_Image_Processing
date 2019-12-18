@@ -85,7 +85,7 @@ void write_ucmatrix(int size_x, int size_y, unsigned char** ucmatrix, char* file
 
 	fclose(f);
 }
-void add(unsigned char** img1, unsigned char** img2, unsigned char** Result) {
+void add(unsigned char** img1, unsigned char** img2, unsigned char** Result,int flag) {
 	int i, j, k;
 	int **addimg1, **addimg2;
 	int** addval;
@@ -96,20 +96,32 @@ void add(unsigned char** img1, unsigned char** img2, unsigned char** Result) {
 	addval = int_alloc(Row, Col);
 
 
+	if (flag == 0) {
+		for (i = 0; i < Row; i++) {
+			for (j = 0; j < Col; j++) {
+				addimg1[i][j] = img1[i][j];
+				addimg2[i][j] = img2[i][j];
 
-	for (i = 0; i < Row; i++) {
-		for (j = 0; j < Col; j++) {
-			addimg1[i][j] = img1[i][j];
-			addimg2[i][j] = img2[i][j];
+				addval[i][j] = addimg1[i][j] + addimg2[i][j];
 
-			addval[i][j] = addimg1[i][j]+addimg2[i][j];
-
+			}
 		}
 	}
-	
+	else {
+		for (i = 0; i < Row; i++) {
+			for (j = 0; j < Col; j++) {
+				addimg1[i][j] = img1[i][j];
+				addimg2[i][j] = img2[i][j];
+
+				addval[i][j] = addimg1[i][j] - addimg2[i][j];
+
+			}
+		}
+	}
 
 	for (i = 0; i < Row; i++) {
 		for (j = 0; j < Col; j++) {
+
 
 			if (addval[i][j] > 255)
 				Result[i][j] = 255;
@@ -128,18 +140,19 @@ int main(int argc, char* argv[]) {
 	unsigned char** img1;
 	unsigned char** img2;
 	unsigned char** outimg;
-
+	int flag;
 	Row = atoi(argv[3]);
 	Col = atoi(argv[4]);
+	flag = atoi(argv[5]);
 	img1 = uc_alloc(Row, Col);
 	img2 = uc_alloc(Row, Col);
 	outimg = uc_alloc(Row, Col);
 	read_ucmartrix(Row, Col, img1, argv[1]);
 	read_ucmartrix(Row, Col, img2, argv[2]);
 
-	add(img1, img2, outimg);
+	add(img1, img2, outimg,flag);
 
-	write_ucmatrix(Col, Row, outimg, argv[5]);
+	write_ucmatrix(Col, Row, outimg, argv[6]);
 
 
 	getchar();

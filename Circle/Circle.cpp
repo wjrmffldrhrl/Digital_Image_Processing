@@ -128,8 +128,8 @@ int main(int argc, char* argv[]) {
 	
 	outimg = uc_alloc(Row, Col);
 
-	//Circle(outimg, Row, Col, 100);
-	Square(outimg, 100);
+	Circle(outimg, Row, Col, 50);
+	//Square(outimg, 100);
 	write_ucmatrix(Col, Row, outimg, argv[3]);
 
 

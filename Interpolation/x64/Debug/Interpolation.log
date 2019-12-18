@@ -1,0 +1,14 @@
+﻿  Interpolation.cpp
+C:\Users\wjrmf\source\repos\opencv2\Interpolation\Interpolation.cpp(77,14): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\Interpolation\Interpolation.cpp(78,14): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\Interpolation\Interpolation.cpp(75,9): warning C4101: 'iR' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Interpolation\Interpolation.cpp(75,13): warning C4101: 'iC' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Interpolation\Interpolation.cpp(74,9): warning C4101: 'zoomScaleFactorR' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Interpolation\Interpolation.cpp(74,27): warning C4101: 'zoomScaleFactorC' :참조되지 않은 지역 변수입니다.
+C:\Users\wjrmf\source\repos\opencv2\Interpolation\Interpolation.cpp(100,15): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\Interpolation\Interpolation.cpp(101,15): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\Interpolation\Interpolation.cpp(139,14): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\Interpolation\Interpolation.cpp(140,14): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\Interpolation\Interpolation.cpp(234,14): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\wjrmf\source\repos\opencv2\Interpolation\Interpolation.cpp(235,14): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Interpolation.vcxproj -> C:\Users\wjrmf\source\repos\opencv2\x64\Debug\Interpolation.exe
